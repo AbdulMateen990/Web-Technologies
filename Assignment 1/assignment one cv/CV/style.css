@@ -1,0 +1,59 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.item1{
+    background-color: rgb(38, 49, 68);
+}
+.name{
+    padding: 0px 0px 0px 75px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.PersonalInfo{
+background-color: rgb(31, 38, 51);
+padding: 2px 0px 2px 15px;
+}
+.Skills{
+background-color: rgb(31, 38, 51);
+padding: 2px 0px 2px 15px;;
+}
+.skillList{
+    color: white;
+}
+.language{
+    color: white;
+    background-color: rgb(31, 38, 51);
+    padding: 17px 0px 17px 15px;
+}
+.languageList{
+    color: white;
+}
+.description{
+    margin: 0px 0px 0px 0px;
+    /* color: white;
+    background-color: rgb(31, 38, 51); */
+    padding: 17px 0px 17px 15px;
+    font-weight: 500;
+}
+.education{
+    color: white;
+    margin-top: 0px;
+    background-color: rgb(38, 49, 68);
+    padding: 19px 0px 19px 15px;
+}
+.projects{
+    /* border-left: 1px solid black; */
+    color: white;
+    margin-top: 0px;
+    background-color: rgb(38, 49, 68);
+    padding: 19px 0px 19px 15px;
+}
+.eduList{
+    font-weight: 500;
+}
+.projList{
+    font-weight: 500;
+}
