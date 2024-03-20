@@ -2,7 +2,9 @@
 font-size: 18px;
 font-family: "Public Sans", sans-serif;
 }
-
+body{
+    margin: 0;
+}
 .navBar{
     display: flex;
     justify-content: space-evenly;
@@ -12,10 +14,18 @@ font-family: "Public Sans", sans-serif;
     list-style-type: none;
     padding: 0;
 }
+.no-bullet{
+    list-style-type: none;
+    padding: 0;
+}
 .no-bullets li{
     display: inline-block;
     margin-right: 15px;
     color: darkgray;
+}
+.reqBtn:hover{
+    font-weight: 600;
+    box-shadow: 0 0 10px 0 hsl(150, 50%, 1%);
 }
 .reqBtn{
     color: aliceblue;
@@ -151,5 +161,119 @@ font-family: "Public Sans", sans-serif;
     color: gray;
     font-size: small;
 }
+.footer{
+    background-color: hsl(233, 26%, 24%);
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    height: 100%;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.socialLogos{
+    display: flex;
+    gap: 15px;
+}
+.options{
+    display: flex;
+    flex-direction: row;
+    gap: 110px;
+}
+.options ul{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+.right{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.right button{
+    margin-right: 55px;
+}
+.right p{
+    color: gray;
+    font-size: medium;
+}
 
+@media screen and (max-width: 768px) {
+    .navBar, .itemContainer, .articleContainer, .options {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .text, .whyEasy, .latestArticles {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .mobImage, .backgroundImages img {
+        width: 30em;
+        height: 30em;
+    }
+
+    .text1 {
+        font-size: 35px;
+    }
+
+    .text3, .text5 {
+        font-size: 25px;
+    }
+
+    .heading, .articleHeading {
+        font-size: 18px;
+    }
+
+    .article img {
+        width: 200px;
+        height: 160px;
+    }
+
+    .logo, .right {
+        width: 100%;
+    }
+
+    .right button {
+        margin-right: 0;
+    }
+}
+#contactForm {
+    display: none;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#contactForm input[type="text"], #contactForm input[type="email"], #contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#contactForm input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#contactForm input[type="submit"]:hover {
+    background-color: #45a049;
+}
