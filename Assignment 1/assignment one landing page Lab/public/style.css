@@ -277,3 +277,115 @@ body{
 #contactForm input[type="submit"]:hover {
     background-color: #45a049;
 }
+.attribute{
+    text-decoration: none;
+    color: darkgrey;
+}
+/*   login CSS */
+.container {
+    width: 300px;
+    padding: 16px;
+    height: 300px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity:1;
+}
+/*   About CSS */
+.eb-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  .eb-about-header {
+    text-align: center;
+    padding: 50px 0;
+  }
+  .eb-about-header h1 {
+    font-size: 3em;
+    color: #333;
+  }
+  .eb-about-header p {
+    font-size: 1.2em;
+    color: #666;
+  }
+  .eb-content-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  .eb-content-section img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+  }
+  .eb-content-section div {
+    flex: 1;
+    padding: 20px;
+  }
+  .eb-content-section h2 {
+    font-size: 2em;
+    color: #333;
+  }
+  .eb-content-section p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+  }
+  .eb-team-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  .eb-team-section h2 {
+    font-size: 2.5em;
+    color: #333;
+  }
+  .eb-team-member {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+  }
+  .eb-team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  .eb-team-member h3 {
+    font-size: 1.2em;
+    color: #333;
+  }
+  .eb-team-member p {
+    font-size: 1em;
+    color: #666;
+  }

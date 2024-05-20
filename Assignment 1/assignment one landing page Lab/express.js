@@ -7,16 +7,23 @@ let server = express();
 server.set('view engine', 'ejs');
 // Set the views directory
 server.set('views', 'views');
+// Use express-ejs-layouts
+server.use(expressLayouts);
 // Set the layout directory
 server.set('layout', 'layout');
 //For CSS file
 server.use(express.static('public'));
 
-// Use express-ejs-layouts
-server.use(expressLayouts);
+
 
 server.get('/', (req, res) => {
   res.render("home");
+});
+server.get('/about', (req, res) => {
+  res.render("about");
+});
+server.get('/login', (req, res) => {
+  res.render("./auth/login");
 });
 
 server.listen(4000);
