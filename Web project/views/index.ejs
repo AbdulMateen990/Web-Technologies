@@ -1,0 +1,77 @@
+<style>
+    .blog {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .blog h2 {
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+    .blog p {
+      color: #333;
+      line-height: 1.6;
+    }
+    .blog img {
+        width: 50px; /* Adjust as needed */
+        height: 50px; /* Adjust as needed */
+        border-radius: 50%; /* Makes the image circular */
+        object-fit: cover;
+    }
+    .blog .comment {
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      margin-top: 20px;
+    }
+    .blog form {
+      margin-top: 10px;
+    }
+    .blog form textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    .blog form button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+  
+  <% blogs.forEach((blog) => { %>
+    <div class="blog">
+      <h2><%= blog.title %></h2>
+      <p><%= blog.content %></p>
+      <p>Author: <%= blog.author.email %></p>
+      <img src="<%= blog.author.profilePicture %>" alt="Author's profile picture">
+      
+      <!-- Add Comment Section -->
+      <form action="/comments/<%= blog._id %>" method="POST">
+        <textarea name="content" required></textarea>
+        <button type="submit">Add comment</button>
+      </form>
+  
+      <!-- Show Comments Button -->
+      <button onclick="showComments('<%= blog._id %>')">Show comments</button>
+  
+      <!-- Comments Section -->
+      <div id="comments-<%= blog._id %>" style="display: none;">
+        <% blog.comments.forEach((comment) => { %>
+          <div class="comment">
+            <p><%= comment.username %>: <%= comment.text %></p>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  <% }) %>
+  
+  <script>
+    function showComments(blogId) {
+      var commentsDiv = document.getElementById('comments-' + blogId);
+      commentsDiv.style.display = 'block';
+    }
+  </script>

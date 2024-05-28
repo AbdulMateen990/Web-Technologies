@@ -25,5 +25,7 @@ server.get('/about', (req, res) => {
 server.get('/login', (req, res) => {
   res.render("./auth/login");
 });
-
+server.get('/blog', (req, res) => {
+  res.render('blog', { blogPosts: [] });
+});
 server.listen(4000);
