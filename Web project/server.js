@@ -68,7 +68,7 @@ app.post('/register', upload.single('profilePicture'), async (req, res) => {
   }
 });
 
-app.post('/compose',checkAuthenticated, async (req, res) => {
+app.post('/compose',checkAuthenticated,upload.single('image'), async (req, res) => {
   // if (!req.user) {
   //     return res.redirect('/login');
   // }
@@ -100,6 +100,7 @@ app.get('/profile', async (req, res) => {
   }
   try {
     const posts = await Blog.find({ author: req.user._id }).sort({ createdAt: -1 });
+    // console.log(posts);
       // console.log(req.user._id);
       // console.log(posts);
       res.render('profile', { posts, user: req.user, isAuthenticated: !!req.user });
@@ -198,10 +199,10 @@ app.get('/logout', (req, res) => {
 app.get('/', async (req, res) => {
   try {
     const blogs = await Blog.aggregate([
-      { $sample: { size: 10 } },
+      { $sample: { size: 15 } },
       {
         $lookup: {
-          from: 'users', // Replace with the actual name of your User collection
+          from: 'users', 
           localField: 'author',
           foreignField: '_id',
           as: 'author'
@@ -251,6 +252,8 @@ app.get('/compose', async (req, res) => {
   app.get('/register', (req, res) => {
     res.render('./auth/register');
   });
+
+  
 
 
 app.listen(PORT, () => {

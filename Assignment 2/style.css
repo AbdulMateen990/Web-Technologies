@@ -1,0 +1,456 @@
+*{
+    font-size: 18px;
+    font-family: "Public Sans", sans-serif;
+    }
+    body{
+        margin: 0;
+    }
+    .navBar{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .no-bullets{
+        list-style-type: none;
+        padding: 0;
+    }
+    .no-bullet{
+        list-style-type: none;
+        padding: 0;
+    }
+    .no-bullets li{
+        display: inline-block;
+        margin-right: 15px;
+        color: darkgray;
+    }
+    .reqBtn:hover{
+        font-weight: 600;
+        box-shadow: 0 0 10px 0 hsl(150, 50%, 1%);
+    }
+    .reqBtn{
+        color: aliceblue;
+        height: 50px;
+        width: 150px;
+        border-radius: 30px;
+        border: 0;
+        background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    }
+    .main{
+        position: relative;
+        overflow: hidden;
+        background-color: hsl(0, 0%, 98%);
+        padding-top:1px;
+        display: flex;
+        height: 127vh;
+        display: flex;
+        flex-direction: row; 
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        padding-left: 10vw;
+        padding-top: 100px;
+        gap: 20px;
+    }
+    .text1{
+        font-size: 55px;
+        font-weight: 400;
+    }
+    .text2{
+        color: gray; 
+    }
+    .mobImage{
+        z-index: 2;
+        position: absolute;
+        top: -7em;
+        right: -15em;
+        height: 50em;
+        width: 50em;
+    }
+    .backgroundImages img{
+        position: absolute;
+        top: -12em;
+        right: -8em;
+        height: 50em;
+        width: 50em;
+    }
+    .easyBank{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+    .itemContainer{
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        padding-top: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    .whyEasy{
+        display: flex;
+        flex-direction: column;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        padding-top: 100px;
+        gap: 0px;
+    }
+    .text3{
+        font-size: 35px;
+        font-weight: 400;
+    }
+    .text4{
+        color: gray; 
+    }
+    .heading{
+        font-size: 23px;
+        font-weight: 200;
+        color: black;
+    }
+    .description{
+        color: gray;
+        /* font-size: 16px; */
+        font-weight: 200;
+    }
+    .latestArticles{
+        display: flex;
+        flex-direction: column;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        padding-top: 50px;
+        gap: 0px;
+        background-color: hsl(0, 0%, 98%);
+    }
+    .text5{
+        font-size: 35px;
+        font-weight: 400;
+    }
+    .articleContainer{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        /* padding-left: 10vw; */
+        padding-right: 10vw;
+        padding-top: 50px;
+        justify-content: space-evenly;
+    }
+    .articleHeading{
+        font-size: 23px;
+        font-weight: 200;
+        color: black;
+    }
+    .article{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 20px;
+    }
+    .article img{
+        border-radius: 5px;
+        border: 1px solid lightgray;
+        width: 230px;
+        height: 190px;
+    }
+    .articleDescription{
+        color: gray;
+        font-weight: 200;
+    }
+    .author{
+        color: gray;
+        font-size: small;
+    }
+    .footer{
+        background-color: hsl(233, 26%, 24%);
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+    }
+    .logo{
+        height: 100%;
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .socialLogos{
+        display: flex;
+        gap: 15px;
+    }
+    .options{
+        display: flex;
+        flex-direction: row;
+        gap: 110px;
+    }
+    .options ul{
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: white;
+    }
+    .right{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .right button{
+        margin-right: 55px;
+    }
+    .right p{
+        color: gray;
+        font-size: medium;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .navBar, .itemContainer, .articleContainer, .options {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .text, .whyEasy, .latestArticles {
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+    
+        .mobImage, .backgroundImages img {
+            width: 30em;
+            height: 30em;
+        }
+    
+        .text1 {
+            font-size: 35px;
+        }
+    
+        .text3, .text5 {
+            font-size: 25px;
+        }
+    
+        .heading, .articleHeading {
+            font-size: 18px;
+        }
+    
+        .article img {
+            width: 200px;
+            height: 160px;
+        }
+    
+        .logo, .right {
+            width: 100%;
+        }
+    
+        .right button {
+            margin-right: 0;
+        }
+    }
+    #contactForm {
+        display: none;
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 5px;
+        width: 300px;
+        margin: 0 auto;
+    }
+    
+    #contactForm input[type="text"], #contactForm input[type="email"], #contactForm textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    
+    #contactForm input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    #contactForm input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .attribute{
+        text-decoration: none;
+        color: darkgrey;
+    }
+    /*   login CSS */
+    .container {
+        width: 300px;
+        padding: 16px;
+        height: 300px;
+        background-color: white;
+        margin: 0 auto;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+    
+    input[type=text], input[type=password] {
+        width: 90%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+    
+    .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+    
+    .btn:hover {
+        opacity:1;
+    }
+    /*   About CSS */
+    .eb-container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+      .eb-about-header {
+        text-align: center;
+        padding: 50px 0;
+      }
+      .eb-about-header h1 {
+        font-size: 3em;
+        color: #333;
+      }
+      .eb-about-header p {
+        font-size: 1.2em;
+        color: #666;
+      }
+      .eb-content-section {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+      }
+      .eb-content-section img {
+        width: 100%;
+        height: auto;
+        max-width: 600px;
+      }
+      .eb-content-section div {
+        flex: 1;
+        padding: 20px;
+      }
+      .eb-content-section h2 {
+        font-size: 2em;
+        color: #333;
+      }
+      .eb-content-section p {
+        font-size: 1.1em;
+        color: #666;
+        line-height: 1.6;
+      }
+      .eb-team-section {
+        text-align: center;
+        padding: 50px 0;
+      }
+      .eb-team-section h2 {
+        font-size: 2.5em;
+        color: #333;
+      }
+      .eb-team-member {
+        display: inline-block;
+        margin: 20px;
+        text-align: center;
+      }
+      .eb-team-member img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+      }
+      .eb-team-member h3 {
+        font-size: 1.2em;
+        color: #333;
+      }
+      .eb-team-member p {
+        font-size: 1em;
+        color: #666;
+      }
+      /* Blog */
+      .blog-container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+      .blog-header {
+        text-align: center;
+        padding: 50px 0;
+      }
+      .blog-header h1 {
+        font-size: 3em;
+        color: #333;
+      }
+      .blog-header p {
+        font-size: 1.2em;
+        color: #666;
+      }
+      .blog-posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 20px 0;
+      }
+      .blog-post {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin: 20px;
+        width: 300px;
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+      .blog-post:hover {
+        transform: translateY(-10px);
+      }
+      .blog-post img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .blog-post-content {
+        padding: 20px;
+      }
+      .blog-post-content h2 {
+        font-size: 1.5em;
+        color: #333;
+      }
+      .blog-post-content p {
+        font-size: 1em;
+        color: #666;
+        line-height: 1.6;
+      }
+      .blog-post-content .blog-read-more {
+        display: block;
+        margin-top: 15px;
+        text-align: right;
+        font-size: 1em;
+        color: #007BFF;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .blog-post-content .blog-read-more:hover {
+        color: #0056b3;
+      }
