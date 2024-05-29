@@ -1,0 +1,70 @@
+<style>
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.product-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: scale(1.05);
+}
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.product-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.product-card p {
+    color: #555;
+    margin: 5px 0;
+}
+.product-card .price {
+    font-weight: bold;
+    color: #007bff;
+}
+.product-card form {
+    margin-top: 10px;
+}
+</style>
+<div class="container">
+    <h1>Featured Products</h1>
+    <div class="product-grid">
+        <% if (featuredProducts.length > 0) { %>
+            <% featuredProducts.forEach(function(product) { %>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="<%= product.name %>">
+                    <h2><%= product.name %></h2>
+                    <p><%= product.description %></p>
+                    <p class="price">$<%= product.price %></p>
+                    <p>Category: <%= product.category %></p>
+                    <form action="/add-to-session/<%= product._id %>" method="POST">
+                        <button type="submit" class="btn">View Details</button>
+                    </form>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No featured products available.</p>
+        <% } %>
+    </div>
+</div>

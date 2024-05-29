@@ -1,0 +1,50 @@
+<style>
+.product-container {
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.product-image {
+    text-align: center;
+}
+.product-image img {
+    max-width: 20%;
+    height: auto;
+    border-radius: 10px;
+}
+.product-details {
+    margin-top: 20px;
+}
+.product-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.product-details p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+.product-details .price {
+    font-size: 20px;
+    color: #007bff;
+    font-weight: bold;
+}
+.product-details .category {
+    font-size: 17px;
+    color: #888;
+}
+</style>
+<div class="product-container">
+    <div class="product-image">
+        <img src="https://via.placeholder.com/600" alt="<%= product.name %>">
+    </div>
+    <div class="product-details">
+        <h1><%= product.name %></h1>
+        <p><%= product.description %></p>
+        <p class="price">$<%= product.price %></p>
+        <p class="category">Category: <%= product.category %></p>
+    </div>
+</div>
