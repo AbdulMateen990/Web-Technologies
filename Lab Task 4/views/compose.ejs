@@ -1,0 +1,14 @@
+<main class="compose-container">
+    <h1><%= post ? "Edit Post" : "Compose New Post" %></h1>
+    <form action="<%= post ? `/posts/update/${post._id}` : '/compose' %>" method="POST" class="compose-form">
+        <div class="form-group">
+            <label for="postTitle">Title</label>
+            <input type="text" id="postTitle" name="title" placeholder="Title" value="<%= post ? post.title : '' %>" required>
+        </div>
+        <div class="form-group">
+            <label for="postBody">Content</label>
+            <textarea id="postBody" name="content" placeholder="Content" required><%= post ? post.content : '' %></textarea>
+        </div>
+        <button type="submit" class="btn-submit"><%= post ? "Update" : "Publish" %></button>
+    </form>
+</main>

@@ -1,0 +1,22 @@
+<main class="auth-container">
+    <h1>Register</h1>
+    <form action="/register" method="POST" class="auth-form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+        </div>
+        <div class="form-group">
+            <label for="profilePicture">Profile Picture</label>
+            <input type="file" id="profilePicture" name="profilePicture">
+        </div>
+        <button type="submit" class="btn-submit">Register</button>
+    </form>
+</main>

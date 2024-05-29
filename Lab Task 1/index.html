@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="app.css" />
+    <title>Envision Estate</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav
+        class="navbar navbar-expand-lg fixed-top nav-color"
+        data-bs-theme="dark"
+        id="mainNav"
+      >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ENVISION ESTATE</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active" aria-current="page" href="#">Buy</a>
+                  <a class="nav-link active" aria-current="page" href="#">Rent</a>
+                  <a class="nav-link active" aria-current="page" href="#">Sell</a>
+                  <a class="nav-link active" href="contact.html">Contact Us</a>
+                  <a class="nav-link active" href="api.html">Ajax Restful API</a>
+                  <a class="nav-link active" href="#">Log In</a>
+                  <a class="nav-link active btn-lg px-lg-3 signup-btn" href="#">Sign Up</a>
+              <!-- <a class="nav-link" href="#">Pricing</a> -->
+              <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid pt-5">
+        <div class="row align-items-center justify-content-center my-5">
+          <div class="col-7 mt-5">
+            <h1 class="display-2 fw-bold text-center head-font">
+              Discover Your New Home
+            </h1>
+            <p class="text-center fs-2 head-font">
+              Helping people find their new home
+            </p>
+            <div class="row justify-content-center mb-5">
+              <div class="my-5 mx-5 col-md-7 position-relative">
+                <!-- <button type="button" class="btn btn-secondary">
+                  <div class="d-inline-block pe-1">Click for more</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+                </button> -->
+                <input
+                  type="text"
+                  class="form-control p-sm-3 p-2 rounded-pill"
+                  id="formGroupExampleInput"
+                  placeholder="City, Neighborhood, School or ZIP"
+                />
+                <button
+                  type="button"
+                  title="button"
+                  class="position-absolute top-0 start-100 btn btn-dark rounded-pill d-none d-sm-block btn-position"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 blank d-none"></div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="my-5">
+        <h2 class="text-center">What are you looking for</h2>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://www.zillowstatic.com/bedrock/app/uploads/sites/5/2022/07/Buy_a_home.webp"
+              class="card-img-top"
+              alt="browse homes"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Browse homes</h5>
+              <p class="card-text">
+                Find your place with an immersive photo experience and the most
+                listings, including things you won’t find anywhere else.
+              </p>
+              <button class="btn btn-outline-primary my-4" type="button">
+                Browse homes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://www.zillowstatic.com/bedrock/app/uploads/sites/5/2022/08/Rent_a_home.webp"
+              class="card-img-top"
+              alt="rent homes"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Rent a home</h5>
+              <p class="card-text">
+                We’re creating a seamless online experience – from shopping on
+                the largest rental network, to applying, to paying rent.
+              </p>
+              <button class="btn btn-outline-primary my-4" type="button">
+                Find rentals
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://www.zillowstatic.com/bedrock/app/uploads/sites/5/2022/07/Sell_a_home.webp"
+              class="card-img-top"
+              alt="sell homes"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Sell a home</h5>
+              <p class="card-text">
+                No matter what path you take to sell your home, we can help you
+                navigate a successful sale.
+              </p>
+              <button class="btn btn-outline-primary my-4" type="button">
+                See your options
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="m-5">
+        <h2 class="text-center">Browse Homes</h2>
+        <h3>Open Homes in Seattle</h3>
+      </div> -->
+      <section class="container-fluid px-0 mx-0 py-3">
+        <div class="row align-items-center content">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img class="img-fluid" src="https://www.travelandleisure.com/thmb/fiQh3JSnXRX98BkmWgivJdJ0NgQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/madison-wisconsin_HERO_COLLEGETOWN0822-776bea04bd764dd6820aaa65b7524800.jpg" alt="town" />
+          </div>
+          <div class="col-lg-6 order-1 order-ld-2 mb-5 mb-lg-0">
+            <div class="row justify-content-center">
+              <div class="col-10 text-center">
+                <h2>Developed Infrastructure</h2>
+                <p class="lead para">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                  libero pariatur laudantium, beatae ab tenetur totam possimus
+                  delectus quod nihil doloremque atque doloribus laboriosam?
+                  Odio possimus maiores ea delectus harum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center content py-5">
+          <div class="col-lg-6 order-2">
+            <img class="img-fluid" src="images/town.jpg" alt="Geralt" />
+          </div>
+          <div class="col-lg-6 order-1 mb-5 md-lg-0">
+            <div class="row justify-content-center">
+              <div class="col-10 text-center">
+                <h2 class="headingRed">Public Areas</h2>
+                <p class="lead para">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                  necessitatibus, reprehenderit minima dignissimos assumenda
+                  deleniti odit! Quia tempora sed exercitationem? Rem,
+                  excepturi. Nihil placeat nisi, ipsam quae numquam ex eaque?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Reiciendis explicabo autem repudiandae temporibus tempore quia
+                  enim non, alias eius voluptate sint suscipit cumque, labore
+                  culpa quod modi at nisi deleniti?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark pt-3">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10">
+              <div class="text-center text-md-start d-flex flex-row justify-content-between flex-wrap">
+                <p class="d-inline"><a href="#" class="text-decoration-none text-white">About Us</a></p>
+                <p class="d-inline"><a href="#" class="text-decoration-none text-white">Feedback</a></p>
+                <p class="d-inline"><a href="#" class="text-decoration-none text-white">Privacy</a></p>
+                <p class="d-inline"><a href="#" class="text-decoration-none text-white">Terms</a></p>
+                <p class="text-white"><i class="bi bi-telephone-fill"></i> +880 123 456 789</p>
+                <p class="text-white"><i class="bi bi-envelope-fill"></i> envestate@gmail.com</p>
+              </div>
+          </div>
+          <div class="col-8 d-flex flex-column flex-md-row justify-content-center justify-content-md-around">
+          </div>
+        </div>
+        <p class="text-white text-center m-0">Envision Estate &#169 <span>2024</span></p>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/f4821b883d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

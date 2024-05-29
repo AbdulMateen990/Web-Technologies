@@ -1,0 +1,22 @@
+<main class="content">
+    <h2>My Posts</h2>
+    <div class="posts">
+        <% posts.forEach(post => { %>
+            <article class="post">
+                <h3 class="post-title"><%= post.title %></h3>
+                <p class="post-body"><%= post.content %></p>
+                <div class="post-actions">
+                    <form action="/posts/delete/<%= post._id %>" method="POST" style="display: inline;">
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+                    <a href="/update/<%= post._id %>" class="edit-btn">Edit</a>
+                    <!-- Add a "Comments" button that links to the individual post page -->
+                    <a href="/comments/<%= post._id %>" class="comments-btn">Comments</a>
+                </div>
+                <div class="post-date" style="text-align: right;">
+                    <%= new Date(post.createdAt).toLocaleDateString() %>
+                </div>
+            </article>
+        <% }) %>
+    </div>
+</main>

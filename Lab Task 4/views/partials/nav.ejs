@@ -1,0 +1,28 @@
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="/" class="navbar-brand">Bloggers</a>
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="/" class="navbar-link">Home</a></li>
+            <li class="navbar-item"><a href="/compose" class="navbar-link">Compose</a></li>
+            <% if (isAuthenticated) { %>
+                <!-- Show these items if the user is logged in -->
+                <li class="navbar-item"><a href="/logout" class="navbar-link">Logout</a></li>
+                <li class="navbar-item"><a href="/profile" class="navbar-link">My Profile</a></li>
+                <img src="<%= user.profilePicture %>" alt="Profile Picture" class="profile-picture">
+
+            <% } else { %>
+                <!-- Show these items if the user is not logged in -->
+                <li class="navbar-item"><a href="/login" class="navbar-link">Login</a></li>
+                <li class="navbar-item"><a href="/register" class="navbar-link">Register</a></li>
+               
+            <% } %>
+
+            <!-- Add more links as needed -->
+        </ul>
+        <div class="navbar-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>

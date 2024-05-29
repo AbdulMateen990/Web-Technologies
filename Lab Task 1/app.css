@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+header{
+    /* background-color: #1a1a1a; */
+    color: white;
+}
+
+.header {
+    /* background-image: url("images/budapest.jpg"); */
+    background-image: url("https://static.rdc.moveaws.com/images/hero/default/2021-11/jpg/hp-hero-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-attachment: fixed; */
+}
+
+
+.blank {
+    min-height: 500px;
+}
+
+.head-font {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.scrolled {
+    background-color: #212529;
+    transition: background-color 0.5s;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 0 6px rgba(0,0,0,.05);
+    transition: 0.3s transform cubic-bezier(.155,1.105,.295,1.12), 0.3s box-shadow;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 0 8px rgba(0,0,0,.1);
+}
+
+.nav-link {
+    transition: 0.3s border-bottom ease-in;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid #f8f9fa;
+}
+
+
+
+@media (min-width: 576px) {
+    .btn-position{
+        transform: translate(-4em, 0.6em);
+    }
+
+    /* .login-btn {
+        float: right;
+    } */
+}
+
+@media (min-width: 1000px) {
+    .signup-btn {
+        background-color: #212529 !important;
+        border-radius: 1em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .intro-heading {
+        font-size: 3.5rem;
+    }
+
+    .nav-color {
+        background-color: #212529;
+    }
+}

@@ -1,0 +1,16 @@
+<h2><%= post.title %></h2>
+<p><%= post.content %></p>
+
+<h3>Comments</h3>
+<% post.comments.forEach((comment,i) => { %>
+    <div class="comment" style="border: 1px solid #ccc; margin-bottom: 10px; padding: 10px;">
+        <p style="font-weight: bold;"><%= comment.text%></p>
+        <p>@<%= comment.username %></p>
+    </div>
+<% }) %>
+
+<h3 style="font-family: Arial, sans-serif; color: #333;">Add a Comment</h3>
+<form action="/comments/<%= post._id %>" method="POST" style="display: flex; flex-direction: column; width: 300px;">
+    <textarea name="content" required style="margin-bottom: 10px; padding: 10px; font-size: 16px;"></textarea>
+    <button type="submit" style="background-color: #007BFF; color: white; padding: 10px; border: none; cursor: pointer; margin-bottom: 5px;">Submit</button>
+</form>
